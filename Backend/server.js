@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const { main } = require("./models/index");
 const productRoute = require("./router/product");
