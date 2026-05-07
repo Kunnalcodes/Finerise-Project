@@ -16,6 +16,11 @@ main();
 app.use(express.json());
 app.use(cors());
 
+// Root API Route (To prevent "Cannot GET /")
+app.get("/", (req, res) => {
+  res.send("FineRise Backend is running successfully!");
+});
+
 // Store API
 app.use("/api/store", storeRoute);
 
